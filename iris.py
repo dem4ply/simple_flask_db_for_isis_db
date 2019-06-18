@@ -2,6 +2,7 @@
 import csv
 import itertools
 from argparse import ArgumentParser
+
 from db import Iris_db
 
 
@@ -36,7 +37,7 @@ parser.add_argument(
     help="if true is going to delete the iris table" )
 
 parser.add_argument(
-     "--ignore_pk", dest="ignore_pk", default=False,
+    "--ignore_pk", dest="ignore_pk", default=False,
     help="if is true is going to ignore the id in the csv" )
 
 

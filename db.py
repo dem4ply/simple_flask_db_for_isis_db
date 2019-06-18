@@ -1,10 +1,10 @@
-from sqlalchemy import create_engine
-from sqlalchemy import (
-    Table, Column, Integer, String, MetaData, ForeignKey, Float, insert,
-    select, delete
-)
-import csv
 import logging
+
+from sqlalchemy import (
+    create_engine, Table, Column, Integer, String, MetaData, Float,
+    insert, select, delete
+)
+
 
 logger = logging.getLogger( 'iris.db' )
 
@@ -41,4 +41,3 @@ class Iris_db:
     def delete( self ):
         q = delete( self.iris )
         return self.conn.execute( q )
-
